@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   BUY
+{% endblock %}
+
+{% block main %}
+    <h1>Add Money</h1>
+    <form action="/fund" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="money" name="money" placeholder="Amount to add" type="number">
+        </div>
+        <div class="mb-3">
+            <select id="symbol" name="symbol">
+                <option value="UPI" class="select">UPI</option>
+                <option value="Credit Card" class="select">Credit Card</option>
+                <option value="Debit Card" class="select">Debit Card</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit">Add</button>
+    </form>
+{% endblock %}
